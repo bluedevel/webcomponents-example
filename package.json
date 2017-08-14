@@ -1,0 +1,20 @@
+{
+  "name": "Sandbox",
+  "version": "1.0.0",
+  "description": "A sandbox",
+  "main": "index.js",
+  "author": "Robin Engel",
+  "license": "MIT",
+  "scripts": {
+    "build": "./node_modules/webpack/bin/webpack.js --progress --colors",
+    "start": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --progress --colors"
+  },
+  "dependencies": {
+    "webpack": "^3.5.4",
+    "webpack-dev-server": "^2.7.1",
+    "@webcomponents/webcomponentsjs": "^1.0.7",
+    "polymer-webpack-loader": "^1.2.6",
+    "babel-loader": "^7.1.1",
+    "babel-core": "^6.25.0"
+  }
+}
