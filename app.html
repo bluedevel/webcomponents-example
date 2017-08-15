@@ -1,0 +1,25 @@
+<template>
+    <p>Clone test</p>
+    <my-element>
+        <test></test>
+        <slot>Slotted</slot>
+    </my-element>
+</template>
+<script>
+    const template = document.querySelector("template");
+    window.customElements.define('test-app', class TestAppElement extends HTMLElement {
+
+        constructor() {
+            super();
+
+            console.log('Init app');
+
+            const clone = document.importNode(template, true);
+            this.attachShadow({mode: 'open'})
+                .innerHTML = template.innerHTML;
+
+            console.log(clone);
+        }
+    });
+    console.log("Loaded test-app");
+</script>
